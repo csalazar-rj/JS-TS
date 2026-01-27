@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+
+    <style>
+
+        table {
+            border-collapse: collapse;
+            width: 800px;
+        }
+
+        table caption {
+            text-align: left;
+            margin-top: 5px;
+            font-style: italic;
+            caption-side: bottom;
+            text-align: right;
+        }
+
+        table th, table td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+
+        table th {
+            background: rgb(148, 146, 146);
+        }
+
+        .responsive-table {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <p>NATIVA Tables</p>
+
+    <div class="responsive-table">
+        <table>
+            <caption>Tabela de Associados</caption>
+            <tr>
+                <th>Matricula</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+            </tr>
+
+            <tbody>
+                <tr>
+                    <td>Mat 1</td>
+                    <td>Nome 1 Nome 1 Nome 1 Noome 1</td>
+                    <td>Sobrenome 1</td>
+                </tr>
+                <tr>
+                    <td>Mat 2</td>
+                    <td>Nome 2</td>
+                    <td>Sobrenome 2</td>
+                </tr>
+                <tr>
+                    <td>Mat 3</td>
+                    <td>Nome 3</td>
+                    <td>Sobrenome 3</td>
+                </tr>
+            </tbody>
+
+
+        </table>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* .caixa {
+    background:red;
+    height: 150px;
+    width: 150px;
+} */
+
+
+.texto {
+    box-sizing: content-box;
+    background: red;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 500px;
+    min-width: 0;
+    min-height: 100px;
+    overflow: auto;
+    /* a propriedade margin abaixo faz a div ficar centralizada na tela */
+    margin: 0 auto 50px auto;
+    padding: 25px;
+    border: solid 2px black;
+}

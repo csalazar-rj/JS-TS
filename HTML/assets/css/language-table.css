@@ -1,0 +1,58 @@
+table {
+    display: table;
+    border: 2px solid darkgray;
+    border-collapse: collapse;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    border-spacing: 2px;
+}
+
+table th, table td {
+    padding: 0.2rem;
+}
+
+/* Faz as linhas da tabela */
+th, td {
+    border: 1px solid darkgray;
+}
+
+colgroup {
+    display: table-column-group;
+}
+
+tbody {
+    display: table-row-group;
+    border-color: inherit;
+    vertical-align: middle;
+}
+
+.column-background {
+  background-color: #97db9a;
+}
+
+.column-fixed-width {
+  width: 50px;
+}
+
+.column-background-border {
+  background-color: #dcc48e;
+  border: 4px solid #c1437a;
+}
+
+
+.table_2 tr {
+    background: #dcc48e;
+}
+
+.table_2 th {
+    background: rgb(82, 182, 215);
+    color: white;
+}
+
+.table_2 td {
+    text-align: center;
+}
+
+.table_2 .fixed-column-width {
+    width: 70px;
+}

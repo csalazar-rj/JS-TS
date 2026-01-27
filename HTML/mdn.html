@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>MDN Tables</title>
+    <!--<link href="./assets/css/minimal-table.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="./assets/css/language-table.css" type="text/css">
+
+</head>
+
+<body>
+    <!-- <h1>Animals table</h1>
+
+    <table>
+      <tr>
+        <th colspan="2">Animals</th>
+      </tr>
+      <tr>
+        <th colspan="2">Hippopotamus</th>
+      </tr>
+      <tr>
+        <th rowspan="2">Horse</th>
+        <td>Mare</td>
+      </tr>
+      <tr>
+        <td>Stallion</td>
+      </tr>
+      <tr>
+        <th colspan="2">Crocodile</th>
+      </tr>
+      <tr>
+        <th rowspan="2">Chicken</th>
+        <td>Hen</td>
+      </tr>
+      <tr>
+        <td>Rooster</td>
+      </tr>
+    </table> -->
+
+    <br>
+    <br>
+    <h1>language timetable</h1>
+
+    <table>
+        <colgroup>
+            <col span="2" />
+            <col class="column-background" />
+            <col class="column-fixed-width" />
+            <col class="column-background" />
+            <col class="column-background-border" />
+            <col span="2" class="column-fixed-width" />
+        </colgroup>
+        <tr>
+            <td>&nbsp;</td>
+            <th>Mon</th>
+            <th>Tues</th>
+            <th>Wed</th>
+            <th>Thurs</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            <th>Sun</th>
+        </tr>
+        <tr>
+            <th>1st period</th>
+            <td>English</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>German</td>
+            <td>Dutch</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th>2nd period</th>
+            <td>English</td>
+            <td>English</td>
+            <td>&nbsp;</td>
+            <td>German</td>
+            <td>Dutch</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th>3rd period</th>
+            <td>&nbsp;</td>
+            <td>German</td>
+            <td>&nbsp;</td>
+            <td>German</td>
+            <td>Dutch</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th>4th period</th>
+            <td>&nbsp;</td>
+            <td>English</td>
+            <td>&nbsp;</td>
+            <td>English</td>
+            <td>Dutch</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+
+    <table class="table_2">
+        <colgroup>
+            <col>
+            <col>
+            <col class="fixed-column-width" />
+            <col>
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Sexo</th>
+                <th>Dt Nascimento</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Carlos</td>
+                <td>Araujo</td>
+                <td>M</td>
+                <td>31/01/1973</td>
+            </tr>
+            <tr>
+                <td>Monica</td>
+                <td>Aleves</td>
+                <td>F</td>
+                <td>19/09/1973</td>
+            </tr>
+            <tr>
+                <td>Lizandra</td>
+                <td>Araujo</td>
+                <td>F</td>
+                <td>23/07/2002</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+    <form action="./submit_page" method="get">
+      <h2>Subscribe to our newsletter</h2>
+      <p>
+        <label for="name">Name (required):</label>
+        <input type="text" name="name" id="name" required />
+      </p>
+      <p>
+        <label for="email">Email (required):</label>
+        <input type="email" name="email" id="email" required />
+      </p>
+      <p>
+        <button>Sign me up!</button>
+      </p>
+    </form>
+
+</body>
+
+</html>

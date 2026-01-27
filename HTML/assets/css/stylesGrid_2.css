@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+       /* as marcações abaixo referem-se a: 
+        50px - altura do Header
+        1fr - para nav e conteúdo
+        50px - altura do footer */
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 200px 1fr;
+    /* a definição de header ocorre 2x porque temos 2 colunas */
+    grid-template-areas: 
+        'header header'
+        'nav content'
+        'footer footer';
+    
+}
+
+/* Definindo nome para as divs filhas (dic (1, 2, 3, 4) */
+.grid div:nth-child(1) {
+    background: red;    
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid div:nth-child(2) {
+    background: yellow;
+    grid-area: nav;
+}
+
+.grid div:nth-child(3) {
+    background: green;
+    grid-area: content;
+}
+
+.grid div:nth-child(4) {
+    background: turquoise;
+    grid-area: footer;
+
+}

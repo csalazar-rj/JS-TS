@@ -1,0 +1,470 @@
+/* declaração de variaveis */
+:root {
+    --primary-color: #0A1128;
+    --color-white: #ffffff;
+    /* variavel declarada para ser usada no padding */
+    --gap: 3rem;
+    --light-gray-color: lightgray;
+    --secondary-color: crimson;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 90%;
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  line-height: 1.5;
+
+}
+
+/* <weight>: Use a value from 100 to 900
+ <uniquifier>: Use a unique and descriptive class name */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;  
+}
+
+h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 3rem;
+}
+
+/* definindo oa valores da classe da primeira seção */
+.main-bg {
+    background-image: url(../img/main-bg.svg);
+    background-size: cover;
+    background-position: center center;
+    color: var(--color-white);
+}
+
+/* definindo oa valores da classe da segunda seção */
+.white-bg {    
+    background: var(--color-white);
+    color: var(--primary-color);
+}
+
+
+/* definindo uma classe para o tamanho total da página */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10 rem var(--gap);
+}
+
+/* definindo uma classe para determinar o tamanho mínimo de cada seção na página */
+.section {
+    min-height: 100vh;
+}
+
+.menu {
+    /* a linha abaixo foi comentada pois já temos a classe (.white-bg) que pode ser chamada no html
+    background: var(--color-white); */
+    
+    /* a declaração abaixo faz o Menu rolar com a página */
+    position: fixed;
+    
+    /* definindo as dimensões do Menu */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /* o parametro abaixo não deixa o conteudo da página passar por cima do Menu quando rolar a pagaina */
+    z-index: 1;
+    border: 1px solid darkgray;
+}
+
+/* classe para posicionamento dos Itens do Menu */
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* os 2 paddings abaixo retiram o espaço a mais que existia no Menu */
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.menu h1 {
+    font-size: 1.1 rem;
+    color: var(--primary-color);
+}
+
+.menu h1 a {
+    color: inherit;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.menu ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  width: 0;
+  height: 0.2rem;
+  background: var(--secondary-color);
+  transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover:after {
+  width: 50%;
+  left: 25%;
+}
+
+.menu-spacing {
+    height: 65px;
+}
+
+/* declarações da primeira seção (proposta) - Begin */
+.proposta-content {
+    position: relative;
+    /* top: -1rem; */
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--gap);
+    min-height: 100vh;
+}
+
+.proposta-main-content, .proposta-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+/* .proposta-main-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+} */
+
+.proposta-img img,
+.proposta-img svg {
+    max-width: 100%;
+    min-height: auto;
+}
+
+/* declarações da primeira seção (proposta) - End */
+
+/* declarações da segunda seção (saude) - Begin */
+.saude-content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 640px;
+    text-align: center;
+}
+
+/* declarações da segunda seção (saude) - End */
+
+
+/* declarações da terceira seção (equipe) - Begin */
+.equipe-content {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2;
+    gap: var(--gap);
+    counter-reset: grid-counter;    
+}
+
+.grid h3 {
+    position: relative;
+    padding-left: 4rem;
+    padding-bottom: 1rem;
+}
+
+.grid h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 5rem;
+    font-style: italic;
+    top: -3rem;
+    left: -0.5rem;
+    transform: rotate(5deg);
+}
+
+/* declarações da terceira seção (equipe) - End */
+
+/* declaração do media responsive - Being */
+
+@media (max-width: 800px) {
+  .proposta-content, .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%; 
+  }
+
+  .gallery-img img {
+    width: 100%;
+  }
+
+  .equipe-content {
+    display: block;
+  }
+
+  .menu {
+    bottom: 0;
+    text-align: center;
+  }
+
+  .menu-content, .menu-content ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu-content {
+    height: 100vh;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .close-menu-label::after {
+    content: '☰';
+    position: fixed;
+    z-index: 2;
+    top: 2rem;
+    right: 2rem;
+    background: var(--primary-color);
+    color: var(--white-color);
+    font-size: 3rem;
+    line-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  .close-menu:checked~.menu {
+    display: block;
+  }
+
+  .close-menu:checked~.close-menu-label::after {
+    content: '×';
+  }
+
+  .menu-spacing {
+    display: none;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  h3 {
+    font-size: 3.4rem;
+  }
+
+  h4 {
+    font-size: 3.2rem;
+  }
+
+  h5 {
+    font-size: 3rem;
+  }
+
+  h6 {
+    font-size: 2.8rem;
+  }
+}
+
+/* declaração do media responsive - End */
+
+
+/* declaração das tables - Being */
+
+.responsive-table {
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+table {
+  min-width: 360px;
+  width: 100%;
+  /* the property below is to eliminate the spaces bertween the border lines */
+  border-collapse: collapse;
+}
+
+table caption {
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 1rem;
+
+}
+
+table th, table td {
+  white-space: nowrap;
+  text-align: left;
+  padding: 1rem;
+  border: 1px solid var(--light-gray-color);  
+}
+
+table th {
+  background: var(--light-gray-color);
+}
+
+/* declaração das tables - End */
+
+
+/* declaração da secao de contato - Begin */
+
+.contato-content {
+    position: relative;
+    /* top: -1rem; */
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--gap);
+    min-height: 100vh;
+}
+
+.contato-main-content, .proposta-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.contato-form {
+  grid-column: span 2;
+}
+
+.contato-form .form-grid {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  width: calc(100% + 3rem);
+}
+
+.form-group {
+  flex: 1 1 320px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  border: none;
+  background: var(--color-white);
+  padding: 10px 11px;
+  width: 100%;
+  font-size: 20px;
+
+}
+
+.form-group button {
+  border: 0.5rem solid var(--color-white);
+  background: none;
+  color: var(--color-white);
+  padding: 1rem 1.5rem;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.form-group button:hover {  
+  background: var(--color-white);
+  color: var(--primary-color);
+  
+}
+
+
+.section-contact {
+    min-height: 120vh;
+}
+
+body .full-width {
+  width: 100%;
+  flex: 1 1 100%;
+}
+
+/* declaração da secao de contato - End */
+
+.footer {
+  text-align: center;  
+}
+
+.footer a {
+  color: var(--primary-color)
+}
+
+.footer p {
+  margin: 0;
+  padding: 3rem;
+}
+
